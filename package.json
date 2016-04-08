@@ -17,5 +17,14 @@
     "bibtex-parser-js": "0.0.2",
     "lodash": "^4.0.0"
   },
-  "scripts": {}
+  "scripts": {},
+  "gitbook": {
+      "properties": {
+          "bibtex-path": {
+              "type": "string",
+              "default": "literature.bib",
+              "description": "Path to the BibTeX references file."
+          }
+      }
+  }
 }

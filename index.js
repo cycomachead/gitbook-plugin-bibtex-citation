@@ -29,7 +29,8 @@ module.exports = {
 
     hooks: {
         init: function() {
-            var bib = fs.readFileSync(this.root + '/literature.bib', 'utf8');
+            var bibTexPath = this.config.get('pluginsConfig.bibtex.bibtex-path', 'literature.bib');
+            var bib = fs.readFileSync(this.root + '/' + bibTexPath, 'utf8');
             this.bib = bibtexParse.toJSON(bib);
             this.bibCount = 0;
         }
@@ -43,6 +44,7 @@ module.exports = {
 
                 var result = '<table class="references">';
 
+                // TODO: Extract into a 'formatting' function.
                 sortedBib.forEach(function(item) {
                     result += '<tr><td>[' + item.number + ']</td><td>';
 
