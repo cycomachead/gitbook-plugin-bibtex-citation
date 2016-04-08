@@ -1,5 +1,5 @@
-Bibtex Citations Gitbook Plugin
-==============
+# Bibtex Citations Gitbook Plugin
+
 
 This plugins requires gitbook `>=2.0.0`.
 
