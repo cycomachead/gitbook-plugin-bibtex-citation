@@ -20,6 +20,7 @@ module.exports = {
                     this.book.bibCount++;
                     citation.number = this.book.bibCount;
                 }
+                // TODO: Add a link to the table.
                 return '[' + citation.number + ']';
             } else {
                 return "[Citation not found]";
